@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ------------------------------
+   Theme Variables
+-------------------------------- */
+
+@theme {
+  --color-background: #030712;
+  --color-surface: rgba(255,255,255,0.06);
+  --color-border: rgba(255,255,255,0.08);
+
+  --color-primary: #3B82F6;
+  --color-secondary: #8B5CF6;
+  --color-accent: #06B6D4;
+
+  --font-display: "Inter", sans-serif;
+}
+
+/* ------------------------------
+   Global Styles
+-------------------------------- */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    margin:0;
+
+    background: #020617;
+
+    color:white;
+
+    font-family:Inter,sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+*{
+
+    box-sizing:border-box;
+
+}
+
+/* Selection */
+
+::selection{
+
+    background:#3B82F6;
+
+    color:white;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#030712;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:100px;
+
+}
