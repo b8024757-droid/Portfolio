@@ -8,7 +8,6 @@ import HeroStats from "./HeroStats";
 export default function HeroContent() {
   return (
     <div className="flex-1">
-
       {/* Greeting */}
       <p className="mb-5 inline-flex items-center rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
         👋 Hello, I'm
@@ -47,23 +46,24 @@ export default function HeroContent() {
 
       {/* Buttons */}
       <div className="mt-10 flex flex-wrap gap-5">
+        <a href="/Balaji_Resume.pdf" download>
+          <Button>
+            <Download size={18} />
+            <span>Download Resume</span>
+          </Button>
+        </a>
 
-        <Button>
-          <Download size={18} />
-          <span>Download Resume</span>
-        </Button>
-
-        <Button variant="secondary">
-          <ArrowRight size={18} />
-          <span>View Projects</span>
-        </Button>
-
+        <a href="#projects">
+          <Button variant="secondary">
+            <ArrowRight size={18} />
+            <span>View Projects</span>
+          </Button>
+        </a>
       </div>
 
       <SocialLinks />
 
       <HeroStats />
-
     </div>
   );
 }
