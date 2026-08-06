@@ -1,4 +1,5 @@
-import { Menu, Download } from "lucide-react";
+import { useState } from "react";
+import { Menu, X, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
 const navItems = [
@@ -9,31 +10,32 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <motion.header
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className="
-      fixed
-      top-2
-      left-1/2
-      -translate-x-1/2
-      z-50
-      w-[95%]
-      max-w-7xl
-      rounded-2xl
-      border
-      border-white/10
-      bg-black/40
-      backdrop-blur-2xl
-      shadow-[0_10px_50px_rgba(0,0,0,0.35)]
+        fixed
+        top-2
+        left-1/2
+        -translate-x-1/2
+        z-50
+        w-[95%]
+        max-w-7xl
+        rounded-2xl
+        border
+        border-white/10
+        bg-black/40
+        backdrop-blur-2xl
+        shadow-[0_10px_50px_rgba(0,0,0,0.35)]
       "
     >
       <div className="flex h-20 items-center justify-between px-8">
 
         {/* Logo */}
-
         <a
           href="#"
           className="text-2xl font-extrabold tracking-wide text-white"
@@ -43,9 +45,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-
-        <nav className="hidden items-center gap-10 md:flex">
-
+        <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -69,58 +69,95 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-
         </nav>
 
         {/* Resume Button */}
-
         <div className="hidden md:flex">
-
           <a
             href="/Balaji_Resume.pdf"
             target="_blank"
             className="
-            flex
-            items-center
-            gap-2
-            rounded-xl
-            bg-gradient-to-r
-            from-blue-600
-            to-cyan-500
-            px-5
-            py-3
-            font-semibold
-            text-white
-            transition-all
-            duration-300
-            hover:scale-105
-            hover:shadow-lg
+              flex
+              items-center
+              gap-2
+              rounded-xl
+              bg-gradient-to-r
+              from-blue-600
+              to-cyan-500
+              px-5
+              py-3
+              font-semibold
+              text-white
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:shadow-lg
             "
           >
             <Download size={18} />
-
             Resume
           </a>
-
         </div>
 
-        {/* Mobile */}
-
+        {/* Mobile Menu Button */}
         <button
+          onClick={() => setMenuOpen(!menuOpen)}
           className="
-          rounded-xl
-          border
-          border-white/10
-          p-3
-          transition
-          hover:bg-white/10
-          md:hidden
+            rounded-xl
+            border
+            border-white/10
+            p-3
+            transition
+            hover:bg-white/10
+            md:hidden
           "
         >
-          <Menu size={22} />
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
-
       </div>
+
+      {/* Mobile Navigation */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-white/10 bg-black/90 backdrop-blur-xl">
+          <nav className="flex flex-col p-6 gap-6">
+
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-300 hover:text-cyan-400 text-lg"
+              >
+                {item.name}
+              </a>
+            ))}
+
+            <a
+              href="/Balaji_Resume.pdf"
+              target="_blank"
+              className="
+                mt-2
+                flex
+                items-center
+                justify-center
+                gap-2
+                rounded-xl
+                bg-gradient-to-r
+                from-blue-600
+                to-cyan-500
+                px-5
+                py-3
+                font-semibold
+                text-white
+              "
+            >
+              <Download size={18} />
+              Resume
+            </a>
+
+          </nav>
+        </div>
+      )}
     </motion.header>
   );
 }
