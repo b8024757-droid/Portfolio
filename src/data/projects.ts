@@ -1,3 +1,4 @@
+```tsx
 export interface Project {
   id: number;
   title: string;
@@ -62,7 +63,6 @@ export const projects: Project[] = [
     github: "https://github.com/b8024757-droid/Django-Job-Portal.git",
 
     live: "https://django-job-portal-o1dv.onrender.com",
-
   },
 
   {
@@ -93,10 +93,10 @@ export const projects: Project[] = [
   {
     id: 4,
 
-    title: "SaaS Project Management Platform",
+    title: "ONYX — The Second Brain",
 
     description:
-      "A modern project management platform with Kanban boards, team collaboration, task tracking, and real-time notifications.",
+      "A production-ready AI-powered second brain designed to organize, retrieve, and intelligently interact with your knowledge.",
 
     techStack: [
       "React",
@@ -113,9 +113,9 @@ export const projects: Project[] = [
       "Analytics Dashboard"
     ],
 
-    github: "",
+    github: "https://github.com/b8024757-droid/Onyx-Production-Ready.git",
 
-    live: "",
+    live: "https://onyx-production-ready.onrender.com/",
   },
 
   {
@@ -184,3 +184,4 @@ export const projects: Project[] = [
     live: "",
   },
 ];
+```
