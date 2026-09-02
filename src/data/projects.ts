@@ -1,4 +1,3 @@
-```tsx
 export interface Project {
   id: number;
   title: string;
@@ -23,14 +22,14 @@ export const projects: Project[] = [
       "Express",
       "Gemini API",
       "Tailwind CSS",
-      "Render"
+      "Render",
     ],
 
     features: [
       "AI Resume Parsing",
       "Candidate Matching",
       "Interview Question Generation",
-      "AI Recruitment Chat"
+      "AI Recruitment Chat",
     ],
 
     github: "https://github.com/b8024757-droid/GenAI-Copilot",
@@ -42,22 +41,17 @@ export const projects: Project[] = [
 
   {
     id: 2,
-
     title: "Django Job Portal",
 
     description:
       "Job portal allowing recruiters to post jobs and candidates to apply with profile management.",
 
-    techStack: [
-      "Django",
-      "Python",
-      "SQLite"
-    ],
+    techStack: ["Django", "Python", "SQLite"],
 
     features: [
       "Job Posting",
       "Candidate Portal",
-      "Authentication"
+      "Authentication",
     ],
 
     github: "https://github.com/b8024757-droid/Django-Job-Portal.git",
@@ -67,22 +61,17 @@ export const projects: Project[] = [
 
   {
     id: 3,
-
     title: "Secure Chat Platform",
 
     description:
       "Real-time secure messaging platform with authentication and encrypted communication.",
 
-    techStack: [
-      "React",
-      "Spring Boot",
-      "WebSocket"
-    ],
+    techStack: ["React", "Spring Boot", "WebSocket"],
 
     features: [
       "Real-time Chat",
       "Authentication",
-      "Encryption"
+      "Encryption",
     ],
 
     github: "https://github.com/b8024757-droid/Secure-Chat-Platform.git",
@@ -92,7 +81,6 @@ export const projects: Project[] = [
 
   {
     id: 4,
-
     title: "ONYX — The Second Brain",
 
     description:
@@ -103,17 +91,18 @@ export const projects: Project[] = [
       "Node.js",
       "PostgreSQL",
       "Socketio",
-      "Redis"
+      "Redis",
     ],
 
     features: [
       "File Upload",
       "Activity Timeline",
       "Role-based Access",
-      "Analytics Dashboard"
+      "Analytics Dashboard",
     ],
 
-    github: "https://github.com/b8024757-droid/Onyx-Production-Ready.git",
+    github:
+      "https://github.com/b8024757-droid/Onyx-Production-Ready.git",
 
     live: "https://onyx-production-ready.onrender.com/",
   },
@@ -130,7 +119,7 @@ export const projects: Project[] = [
     features: [
       "Authentication",
       "Course Management",
-      "Student Dashboard"
+      "Student Dashboard",
     ],
 
     github: "",
@@ -140,18 +129,16 @@ export const projects: Project[] = [
 
   {
     id: 6,
-
     title: "E-Commerce Platform",
 
-    description:
-      "Shopify Lite",
+    description: "Shopify Lite",
 
     techStack: ["React", "Node", "MySql", "stripe"],
 
     features: [
       "product management",
       "order tracking",
-      "Reviews"
+      "Reviews",
     ],
 
     github: "",
@@ -161,7 +148,6 @@ export const projects: Project[] = [
 
   {
     id: 7,
-
     title: "Project Management System",
 
     description:
@@ -170,13 +156,13 @@ export const projects: Project[] = [
     techStack: [
       "React",
       "Node.js",
-      "MongoDB"
+      "MongoDB",
     ],
 
     features: [
       "Task Management",
       "Teams",
-      "Analytics"
+      "Analytics",
     ],
 
     github: "",
@@ -184,4 +170,3 @@ export const projects: Project[] = [
     live: "",
   },
 ];
-```
